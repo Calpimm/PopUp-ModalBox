@@ -1,0 +1,563 @@
+/* Google Font Import - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  overflow: hidden;
+  background: rgb(18,31,66);
+  background: linear-gradient(0deg, rgba(18,31,66,0.9416141456582633) 0%, rgba(0,0,0,1) 100%);
+}
+section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+section .profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+section.show .profile {
+  display: none;
+}
+section .profile .profile-img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  padding: 2px;
+  margin-bottom: 20px;
+}
+
+.profile .name,
+.profile .profession {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.profile .profession {
+  font-weight: 400;
+  margin-top: -6px;
+}
+.profile .button {
+  display: flex;
+  align-items: center;
+  padding: 12px 25px;
+  background: #4070f4;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+.profile .button:hover {
+  background: #275df1;
+}
+.profile .button i {
+  color: #fff;
+  font-size: 22px;
+  margin-right: 5px;
+}
+.profile .button button {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  pointer-events: none;
+}
+
+section .popup-outer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+section.show .popup-outer {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+section .popup-box {
+  position: relative;
+  padding: 30px;
+  max-width: 420px;
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+}
+.popup-box .close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 30px;
+  color: #b4b4b4;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.popup-box .close:hover {
+  color: #333;
+}
+section .popup-box .profile-text {
+  display: flex;
+  align-items: center;
+}
+section .popup-box img {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile-text .text {
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-text .text .name {
+  margin-left: 30%;
+  font-size: 20px;
+  font-weight: 400;
+}
+.profile-text .text .profession {
+  font-size: 20px;
+  font-weight: 500;
+}
+section .popup-box textarea {
+  min-height: 200px;
+  width: 100%;
+  margin-top: 20px;
+  outline: none;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  resize: none;
+  font-size: 18px;
+  font-weight: 400;
+  background: #f3f3f3;
+}
+section .popup-box .button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+.popup-box .button button {
+  outline: none;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #6f93f6;
+  margin-left: 12px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button button.cancel {
+  background: #4070f4;
+}
+.button button.cancel:hover {
+  background: #7F6AFF;
+}
+.button button.send:hover {
+  background: #275df1;
+}
+
+
+.wrapper {
+  position: fixed;
+  bottom: 50px;
+  right: -370px;
+  max-width: 345px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 25px 22px;
+  transition: right 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cookieshow1 {
+  margin: auto;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+
+.cookieshow2{
+  font-size: 24px;
+  color: #ffffff;
+  display: grid;
+  justify-content: center;
+
+}
+
+
+.cookieshow{
+  padding: 7px 25px;
+  margin-top: 5%;
+  border-radius: 10px;
+  border-style: double;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffff;
+  border: none;
+  background-color: #4070f4;
+  justify-content: center;
+  display: grid;
+  transition: all 0.3s ease;
+}
+
+.cookieshow:hover {
+  background: #034bf1;
+}
+
+.wrapper.show {
+  right: 20px;
+}
+.wrapper header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+header i {
+  color: #4070f4;
+  font-size: 32px;
+}
+header h2 {
+  color: #4070f4;
+  font-weight: 500;
+}
+.wrapper .data {
+  margin-top: 16px;
+}
+.wrapper .data p {
+  color: #333;
+  font-size: 16px;
+}
+.data p a {
+  color: #4070f4;
+  text-decoration: none;
+}
+.data p a:hover {
+  text-decoration: underline;
+}
+.wrapper .buttons {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttons .button {
+  border: none;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background: #4070f4;
+  cursor: pointer;
+  width: calc(100% / 2 - 10px);
+  transition: all 0.2s ease;
+}
+
+.buttonn{
+  border: none;
+  color: #fff;
+  padding: 8px 0;
+  border-radius: 4px;
+  background: #4070f4;
+  cursor: pointer;
+  width: calc(100% / 2 - 10px);
+  transition: all 0.2s ease;
+}
+.buttons #acceptBtn:hover {
+  background-color: #034bf1;
+}
+#declineBtn {
+  border: 2px solid #4070f4;
+  background-color: #fff;
+  color: #4070f4;
+}
+#declineBtn:hover {
+  background-color: #4070f4;
+  color: #fff;
+}
+
+
+
+
+
+
+/* Path: style.css */
+.buttonread{
+  margin: auto;
+  margin-top: 3%;
+  justify-content: center;
+  display: flex;
+  color: #FFF;
+  font-style: initial;
+  font-size: 20px;
+}
+
+
+.mainButtons button{
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  display: grid;
+  height: 80px;
+  width: 200px;
+  padding: 7px 25px;
+  background-color: #4070f4;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mainButtons button:hover {
+  background: #034bf1;
+  color: #fff;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 20px 30px 20px 30px;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 8px;
+  width: 440px;
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.21, 0.99);
+}
+
+.modal.active .modal-content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  animation-name: slideIn;
+}
+
+.modal.active.slideOut .modal-content {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  animation-name: slideOut;
+
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.modal-header h2 {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #4D4B4B;
+}
+.modal-message p {
+  margin: 0;
+  color: #5A5959;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150.023%; 
+  letter-spacing: 0.15px;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  
+}
+.cancel-button, .share-button {
+  padding: 8px 16px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  height: 41px;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+.cancel-button {
+  width: 100px;
+  color: #4070f4;
+  background: #EBE8FF;
+}
+.cancel-button:hover {
+  background: #e3e3e3;
+}
+.share-button {
+  width: 120px;
+  background: #4070f4;
+  color: #FFF;
+  box-shadow: 0px 5px 9px 0px rgba(127, 106, 255, 0.18);
+}
+.share-button:hover {
+  box-shadow: 0px 5px 9px 0px rgba(127, 106, 255, 0.40);
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a5a5a5; 
+  padding: 0;
+  font-size: 40px;
+  margin: 0;
+  line-height: 0px;
+}
+.modal-header button:hover {
+  color: #4D4B4B;
+}
+
+@keyframes slideIn {
+  from {
+    top: 8%;
+    opacity: 0;
+  }
+  to {
+    top: 20%;
+    opacity: 1;
+  }
+}
+@keyframes slideOut {
+  from {
+    top: 20%;
+    opacity: 1;
+  }
+  to {
+    top: 5%;
+    opacity: 0;
+
+  }
+}
+.modal2-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px 30px 25px 30px;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.10);
+  border-radius: 8px;
+  width: 440px;
+  opacity: 0;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.21, 0.99);
+}
+.modal.active .modal2-content {
+  opacity: 1;
+  animation-name: slideOuts;
+
+}
+.modal.active.slideIns .modal2-content {
+  opacity: 0;
+  animation-name: slideIns;
+
+}
+.modal-input input {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+  transition: border-color 0.3s; 
+}
+.modal-input input:focus {
+  border-color: #7F6AFF; 
+  outline: none;
+}
+.modal-input input::placeholder {
+  color: #999; 
+}
+.subscribe-button {
+    padding: 8px 16px;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  height: 45px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  width: 100%;
+  background: #4070f4;
+  color: #FFF;
+}
+.subscribe-button:hover {
+  box-shadow: 0px 5px 9px 0px rgba(127, 106, 255, 0.18);
+}
+@keyframes slideIns {
+  from {
+    top: 50%;
+    opacity: 1;
+  }
+  to {
+    top: 55%;
+    opacity: 0;
+  }
+}
+
+@keyframes slideOuts {
+  from {
+    top: 55%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}

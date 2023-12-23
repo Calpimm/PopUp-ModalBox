@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Popup Modal Box</title>
+    <link rel="stylesheet" href="style.css">
+  <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+</head>
+<body>   
+    <section>
+        <div class="profile">
+            <div class="profile-img">
+                
+            </div>
+            <span class="name">Calpimm</span>
+            <span class="profession">Community Manager</span>
+            <div id="hireBtn" class="button">
+                <i class="bx bxs-envelope"></i>
+                <button>Hire me</button>
+            </div>
+        </div>
+
+        <!-- popup box start -->
+        <div class="popup-outer">
+            <div class="popup-box">
+                <i id="close" class="bx bx-x close"></i>
+                <div class="profile-text">
+                    
+                    <div class="text">
+                        <span class="name">Calpim</span>
+                         <span class="profession">Community Manager</span>
+                    </div>
+                </div>
+                <form action="#">
+                    <textarea spellcheck="false" placeholder="Enter your message"></textarea>
+                    <div class="button">
+                        <button id="close" class="cancel">Cancel</button>
+                        <button class="send">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- cookie -->
+        <div class="cookieshow1">
+            <span class="cookieshow2"> Cookiee!!!</span>
+            <button class="cookieshow">Click for cookies
+                <i class="bx bxs-cookie"></i>
+        </div>
+        </button>
+        <div class="wrapper">
+            <header>
+              <i class="bx bx-cookie"></i>
+              <h2>Cookies Consent</h2>
+            </header>
+            <div class="data">
+              <p>This website use cookies to help you have a superior and more relevant browsing experience on the website. <a href="#"> Read more...</a></p>
+            </div>
+            <div class="buttons">
+              <button class="buttonn" id="acceptBtn">Accept</button>
+              <button class="button" id="declineBtn">Decline</button>
+            </div>
+        </div>
+        <!-- Sub -->
+        <div class="mainButtons">
+            <span class="buttonread">HuH ?
+            </span>
+            <button id="shareButton">Share
+                <i class="bx bx-share"></i>
+            </button>
+            <button id="subscribeButton">Subscribe
+                <i class="bx bx-test-tube"></i>
+            </button>
+            </div>
+          
+            <div class="modal" id="confirmationModal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2>Confirmation</h2>
+                  <button id="closeModal">&times;</button>
+                </div>
+                <div class="modal-message">
+                  <p>Are you sure you want to share this post on your social media? Sharing this content will let your friends and followers know about it.</p>
+                </div>
+                <div class="modal-buttons">
+                  <button class="cancel-button" id="cancelButton">CANCEL</button>
+                  <button class="share-button" id="shareConfirmButton">SHARE</button>
+                </div>
+              </div>
+            </div>
+          
+            <div class="modal" id="subscriptionModal">
+              <div class="modal2-content">
+                <div class="modal-header">
+                  <h2>Subscription</h2>
+                  <button id="closeSubscriptionModal">&times;</button>
+                </div>
+                <div class="modal-message">
+                  <p>Join us for the latest update! subscribe to our newsletter and stay updated with insightful articles, latest trends in technology, and exclusive offers.</p>
+                </div>
+                <div class="modal-input">
+                <input type="email" id="emailInput" placeholder="Enter your email">
+              </div>
+                <div class="modal-buttons">
+                  <button class="subscribe-button" id="subscribeConfirmButton">SUBSCRIBE</button>
+                </div>
+              </div>
+            </div>
+    </section>
+    
+</body>
+</html>
