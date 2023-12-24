@@ -4,6 +4,7 @@
 Popup box modal examples categorized for everyone. 
 
 Usage is unlimited
+Feel to free usage (Mean: U can download and edit, then use your projects)...
 
 [![Discord](https://img.shields.io/badge/Join_Discord-5865F2)](https://discord.gg/)
 [![Pop_Up](https://img.shields.io/badge/Lamron_Studio-red
